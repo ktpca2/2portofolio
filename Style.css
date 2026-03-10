@@ -4,8 +4,8 @@ body {
 }
 .profile-image
 {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -33,7 +33,6 @@ header{
     z-index: 10000;        /* make sure it’s above all content */
 
     border-bottom: 3px solid rgb(0, 0, 0);
-    
     background-color: #4F848E;
 }
 nav{
