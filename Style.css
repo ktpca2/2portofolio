@@ -1,11 +1,11 @@
 body {
-  font-family: "Jersey 10", sans-serif;
-  background-color: #3A4B53;
+    font-family: "Jersey 10", sans-serif;
+    background-color: #3A4B53;
 }
-.profile-image
-{
-    width: 500px;
-    height: 500px;
+
+.profile-image {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -15,40 +15,47 @@ body {
     border-radius: 50%;
 }
 
-.main-content
-{
-    display : flex;
+.main-content {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center; /* center vertically */
+    margin-bottom: 0;
+    gap: 40px; /* add spacing between text and image */
 }
 
-.profile-container
-{
+.profile-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
 }
-main{
+
+main {
     padding-top: 30px;
 }
-header{
-    position: fixed;      /* FIXED, not sticky */
+
+header {
+    position: fixed;
+    /* FIXED, not sticky */
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10000;        /* make sure it’s above all content */
+    z-index: 10000;
+    /* make sure it’s above all content */
 
     border-bottom: 3px solid rgb(0, 0, 0);
     background-color: #4F848E;
 }
-nav{
+
+nav {
     display: flex;
     flex-direction: row;
     margin: 10px;
-   
+
 }
-.nav-stuff{
+
+.nav-stuff {
     margin: auto;
     font-size: 1.3em;
 }
@@ -73,27 +80,30 @@ a:active {
     text-decoration: none;
 }
 
-.description{
+.description {
     color: #ececec;
-    font-size: 3em;
+    font-size: 1.5em; /* reduce from 3em so it fits nicely inside the card */
     text-align: left;
-    margin-top: 20px;
-    width: 800px;
+    margin-top: 0;
+    flex: 1; /* allow flexible width */
 }
 
 @media (max-width: 1000px) {
     .main-content {
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; /* text under image */
         align-items: center;
-        
+        gap: 20px;
     }
+
     .description {
         width: 100%;
-        text-align: left;
+        text-align: center;
+        font-size: 1.2em; /* slightly smaller on mobile */
     }
+
     .profile-image {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -102,15 +112,17 @@ a:active {
     flex-direction: column;
     align-items: center;
 }
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    width: 80%;
+    width: 100%; /* Changed from 80% to fill the new background box */
     max-width: 1000px;
     margin-top: 30px;
     padding-bottom: 50px;
 }
+
 .project-card {
     background-color: #4F848E;
     border: 3px solid black;
@@ -121,19 +133,66 @@ a:active {
     text-decoration: none;
     transition: transform 0.2s;
 }
+
 .project-card:hover {
     transform: translateY(-5px);
     color: white;
     border-color: #ececec;
 }
+
 /* Mobile Resizing for Projects */
 @media (max-width: 800px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (max-width: 500px) {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Page styles for About and Contact */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.content-card {
+    background-color: #4F848E;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 40px;
+    width: 90%; /* wider to allow side-by-side elements */
+    max-width: 1000px;
+    margin-top: 50px;
+    color: #ececec;
+    font-size: 2em;
+    text-align: center;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+    /* extra flair */
+}
+
+.content-card h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.content-card a {
+    color: #3A4B53;
+    text-decoration: underline;
+}
+
+.content-card a:hover {
+    color: white;
+}
+
+.content-card ul {
+    list-style-type: none;
+    padding: 0;
 }
