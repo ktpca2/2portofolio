@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Style.css" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Kaj Portofolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <style>
+        .projects-container {
+            padding-top: 50px; /* Space for the fixed header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 80%;
+            max-width: 1000px;
+            margin-top: 30px;
+            padding-bottom: 50px;
+        }
+        .project-card {
+            background-color: #4F848E;
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: #ececec;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            color: white;
+            border-color: #ececec;
+        }
+        /* Mobile Resizing */
+        @media (max-width: 800px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 500px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="jersey-10-regular">
+        <nav>
+            <a class="nav-stuff" href="index.html">Home</a>
+            <a class="nav-stuff" href="Projects.html">Projects</a>
+            <a class="nav-stuff" href="Contact.html">Contact</a>
+            <a class="nav-stuff" href="About.html">About</a>
+        </nav>
+    </header>
+    <main class="jersey-10-regular projects-container">
+        <h1 style="color: #ececec; font-size: 4em; margin-bottom: 0;">My Projects</h1>
+        <div class="projects-grid">
+            <a href="#" class="project-card">
+                <h2>Example Project 1</h2>
+                <p>This is an empty placeholder for a future project.</p>
+            </a>
+            <a href="#" class="project-card">
+                <h2>Example Project 2</h2>
+                <p>This is an empty placeholder for a future project.</p>
+            </a>
+            <a href="#" class="project-card">
+                <h2>Example Project 3</h2>
+                <p>This is an empty placeholder for a future project.</p>
+            </a>
+            <a href="#" class="project-card">
+                <h2>Example Project 4</h2>
+                <p>This is an empty placeholder for a future project.</p>
+            </a>
+            <a href="#" class="project-card">
+                <h2>Example Project 5</h2>
+                <p>This is an empty placeholder for a future project.</p>
+            </a>
+            <a href="#" class="project-card">
+                <h2>Example Project 6</h2>
+                <p>This is an empty placeholder for a future project.</p>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
