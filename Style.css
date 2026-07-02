@@ -55,6 +55,15 @@ nav {
 
 }
 
+footer {
+    text-align: center;
+    padding: 2px;
+    background-color: #4F848E;
+    color: #ececec;
+    border-top: 3px solid black;
+    margin-top: 20px;
+}
+
 .nav-stuff {
     margin: auto;
     font-size: 1.3em;
@@ -107,10 +116,17 @@ a:active {
     }
 }
 
+/* .projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
 .projects-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;   /* add this line */
 }
 
 .projects-grid {
@@ -184,7 +200,7 @@ a:active {
 }
 
 .content-card a {
-    color: #3A4B53;
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -195,4 +211,196 @@ a:active {
 .content-card ul {
     list-style-type: none;
     padding: 0;
+}
+/* Project detail page */
+.project-detail {
+    text-align: left;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 0.55em;
+    color: #ececec;
+    text-decoration: underline;
+}
+
+.back-link:hover {
+    color: white;
+}
+
+.project-header h1 {
+    font-size: 1em; /* content-card already scales h1 to 2.5em via base rule below */
+}
+
+.tag-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: #3A4B53;
+    border: 2px solid black;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 16px;
+    color: #ececec;
+}
+
+.project-card .tag {
+    font-size: 16px;
+}
+
+
+.project-body {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.project-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid black;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.project-text p {
+    font-size: 0.6em;
+    line-height: 1.5;
+}
+
+.contributions h2 {
+    font-size: 0.75em;
+    text-shadow: 2px 2px 0px #000;
+    margin-bottom: 10px;
+}
+
+.contribution-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.contribution-list li {
+    font-size: 0.55em;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background-color: #3A4B53;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.project-btn {
+    background-color: #3A4B53;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 0.55em;
+    color: #ececec;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.project-btn:hover {
+    transform: translateY(-3px);
+    color: white;
+    border-color: #ececec;
+}
+
+@media (max-width: 700px) {
+    .project-body {
+        flex-direction: column;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.project-media {
+    margin-top: 30px;
+}
+
+.project-media h2 {
+    font-size: 0.75em;
+    text-shadow: 2px 2px 0px #000;
+    margin-bottom: 15px;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.media-item {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .media-item {
+        height: auto;
+    }
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.top-links {
+    margin: 0; /* overschrijft de eerdere margin, want die zat er nu in top-bar al netjes */
+}
+
+@media (max-width: 700px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.project-card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.project-card .tag-list {
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
