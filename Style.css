@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Jersey 10", sans-serif;
     background-color: #3A4B53;
@@ -194,6 +198,13 @@ a:active {
 
 .content-card h1 {
     font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.content-card h2 {
+    font-size: 1.4em;
     margin-top: 0;
     margin-bottom: 20px;
     text-shadow: 2px 2px 0px #000;
@@ -403,4 +414,56 @@ a:active {
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 0;
+}
+
+/* Skills section on About page */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 60px;
+    row-gap: 50px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.skills-card {
+    width: 100%;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.skills-subsection {
+    margin-bottom: 20px;
+}
+
+.skills-subsection:last-child {
+    margin-bottom: 0;
+}
+
+.skills-subsection h3 {
+    font-size: 0.7em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 0px #000;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.6em;
+}
+
+.skills-list li {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background-color: #3A4B53;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+@media (max-width: 700px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
